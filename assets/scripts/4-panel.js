@@ -40,9 +40,9 @@ function updatePanelInfo(panel, districtSource, formatNumber) {
        - The total number of votes for all candidates (use the function "formatNumber" to format the number).
    */
   var bestRes = topVoteResult(districtSource.results) // voir 2-map.js pour getBestResult
-  panel.select("#district-name").text(districtSource.name + " [" + districtSource.id + "]")              // voir index.html
-  panel.select("#elected-candidate").text(bestRes.candidate + " (" + bestRes.party + ")")               // voir index.html
-  panel.select("#votes-count").text(formatNumber(d3.sum(districtSource.results.map(res => res.votes))))  // voir index.html
+  panel.select("#district-name").text(districtSource.name + " [" + districtSource.id + "]")             
+  panel.select("#elected-candidate").text(bestRes.candidate + " (" + bestRes.party + ")")               
+  panel.select("#votes-count").text(formatNumber(d3.sum(districtSource.results.map(res => res.votes))))  
 }
 
 /**
